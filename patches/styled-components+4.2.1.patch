@@ -1,0 +1,15 @@
+diff --git a/node_modules/styled-components/native/dist/styled-components.native.esm.js b/node_modules/styled-components/native/dist/styled-components.native.esm.js
+index dabd856..7057886 100644
+--- a/node_modules/styled-components/native/dist/styled-components.native.esm.js
++++ b/node_modules/styled-components/native/dist/styled-components.native.esm.js
+@@ -6,7 +6,9 @@ import { isElement, ForwardRef, isValidElementType } from 'react-is';
+ import supportsColor from 'supports-color';
+ import transformDeclPairs from 'css-to-react-native';
+ import memoize from 'memoize-one';
+-import reactNative, { StyleSheet } from 'react-native';
++import * as reactNative from 'react-native-web';
++
++const { StyleSheet } = reactNative;
+ 
+ // 
+ // Source: https://github.com/garycourt/murmurhash-js/blob/master/murmurhash2_gc.js
